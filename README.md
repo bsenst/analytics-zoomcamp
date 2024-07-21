@@ -21,13 +21,19 @@ To install the necessary dependencies, run the following command:
 
 ```bash
 conda create -n stock-zoomcamp-env
+conda init
+```
+
+Close the terminal windows. Open a new terminal window.
+
+```bash
 conda activate stock-zoomcamp-env
 conda install -c conda-forge libta-lib
 conda install pip
 pip install -r requirements.txt
 ```
 
-If issues arise with TA-lib installation refer to their [README](https://pypi.org/project/TA-Lib/) for soluttions
+If issues arise with TA-lib installation refer to their [README](https://pypi.org/project/TA-Lib/) for solutions
 
 ## Usage
 To run the application, use the following command:
@@ -40,7 +46,7 @@ Per default data is assumed to be local.
 
 To enable download, transformation and training use the cli arguments:
 ```bash
-python main.py --download --transform --train
+python main.py --fetch --transform --train
 ```
 
 Example data is available here: https://drive.google.com/file/d/1EQ4Ss8mlRHaX48uU_uqMX5qHMm9dRrqv/view?usp=drive_link
